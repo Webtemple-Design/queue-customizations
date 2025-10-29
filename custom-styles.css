@@ -13,6 +13,13 @@ html,
   --cu-task-view-content-width-wide-fullscreen: calc(100% - 48px);
 }
 
+/* Invert Avatar */
+#loading-spinner img,
+#filterChatrooms .avatar-medium,
+.login-box .avatar-md {
+  filter: brightness(0) invert(1);
+}
+
 /* Kanban Boad */
 .stupid-column-edit {
   margin-bottom: 0;
