@@ -3,11 +3,15 @@ html,
 :root {
   --platform-background: #101012 !important;
   --border-color: #202229 !important;
+  --border-inner-color: #33363d;
+  --text-color-muted: lch(63.975 1.933 272);
   --background-secondary: linear-gradient(
     lch(2.467 0 272 / 0.4),
     lch(2.467 0 272 / 0.1) !important;
   ) !important;
 }
+
+/* Kanban Boad */
 .stupid-column-edit {
   margin-bottom: 0;
   background: transparent !important;
@@ -30,6 +34,7 @@ html,
 }
 .kanban-card-title .kanban-card-title-wrap {
   font-size: 13px !important;
+  padding-right: 15px;
 }
 #filterChatrooms li a {
   opacity: 0.8;
@@ -45,4 +50,178 @@ html,
 }
 .kanban-card-users-image {
   border: 1px solid var(--border-color);
+}
+
+#filterChatrooms li a {
+  opacity: 0.8;
+}
+#filterChatrooms li a:hover {
+  opacity: 1;
+}
+.kanban-card-users {
+  margin: 0;
+}
+.kanban-card-info {
+  align-items: center;
+  color: var(--text-color-muted);
+}
+.kanban-card-users-image {
+  border: 1px solid var(--border-color);
+}
+.kanban-card-info-comments .badge {
+  background-color: transparent;
+  border: 1px solid var(--border-inner-color) !important;
+  color: var(--text-color-muted);
+  padding: 6px;
+  line-height: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.kanban-card-info-comments .badge i {
+  font-size: 1.2em;
+}
+.kanban-card-info-comments .badge.badge-green i {
+  color: #00c292;
+}
+.kanban-card-info-comments .badge.badge-red i {
+  color: #ff0019;
+}
+
+/* Task Window */
+.react-responsive-modal-closeButton {
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  width: unset;
+  border-radius: 0.3em;
+  border: 1px solid var(--border-color);
+}
+.react-responsive-modal-closeButton:hover {
+  background-color: var(--border-color);
+}
+.react-responsive-modal-closeButton svg {
+  width: 20px;
+  height: 20px;
+}
+.full-card-left {
+  border: none;
+}
+.full-card-left .full-card-header {
+  width: var(--cu-task-view-content-width-fullscreen) !important;
+  margin: auto;
+  border-bottom: none;
+  position: relative;
+}
+.full-card-left-body > * {
+  width: var(--cu-task-view-content-width-fullscreen) !important;
+  margin: auto;
+}
+ul.react-tabs-tabs {
+  border-bottom: 1px solid var(--border-inner-color) !important;
+}
+ul.react-tabs-tabs > li {
+  padding: 15px 10px !important;
+  position: relative;
+}
+ul.react-tabs-tabs > li:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  /*     background-color: var(--button-background); */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -5px 40px 5px rgba(181, 255, 0, 0); /* Cyan glow */
+  transition: box-shadow 0.3s ease-in-out;
+}
+ul.react-tabs-tabs > li:hover:after {
+  box-shadow: 0 0 40px 2px rgba(181, 255, 0, 0.8); /* Cyan glow */
+}
+.full-card-wrapper .resize-handle {
+  background: transparent;
+  width: 1px;
+  position: relative;
+  transition: all 0.2s ease;
+  padding: 0 2px;
+}
+.full-card-wrapper .resize-handle:after {
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--border-color);
+  content: "";
+}
+.full-card-right .full-card-header .react-tabs-tabs {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+}
+.full-card-wrapper .full-card-right {
+  background-color: var(--body-background);
+}
+.mention {
+  color: var(--button-background);
+  border: 1px solid var(--border-inner-color) !important;
+  font-size: 0.9em;
+  padding: 0.2em 0.3em;
+}
+div[id^="task-comment"] {
+  border-color: var(--border-inner-color);
+}
+.daas-task-user-info {
+  margin-bottom: 15px;
+}
+.daas-task-comments-avatar {
+  background: var(--body-background);
+  border: 1px solid var(--border-inner-color);
+}
+.daas-task-comments-comment .full-card-description a {
+  color: var(--button-background);
+  border: 1px solid var(--border-inner-color) !important;
+  font-size: 1em;
+  padding: 0.2em 0.3em;
+  max-width: 100% !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 0.4rem;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+.full-card-right-body {
+  padding: 0;
+}
+.full-card-comments-wrapper {
+  padding: 0 !important;
+  height: calc(100vh - 68px);
+}
+.full-card-comments-wrapper > div {
+  padding: 15px;
+}
+.full-card-comments-wrapper .background_three {
+  border-top: 1px solid var(--border-color);
+  background-color: var(--body-background);
+}
+[id^="task-comment-form"] {
+  margin-bottom: 0;
+  position: relative;
+}
+[id^="task-comment-form"] .background-none.default-padding {
+  padding-bottom: 60px !important;
+}
+[id^="task-comment-form"] .task-comment-form-button-wrapper {
+  position: absolute;
+  margin: 0;
+  bottom: 15px;
+  left: 15px;
+  width: calc(100% - 30px);
+}
+.task-comment-form-r-keybind {
+  top: auto;
+  bottom: 0;
+  right: 0;
 }
