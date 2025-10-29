@@ -31,3 +31,18 @@ html,
 .kanban-card-title .kanban-card-title-wrap {
   font-size: 13px !important;
 }
+#filterChatrooms li a {
+  opacity: 0.8;
+}
+#filterChatrooms li a:hover {
+  opacity: 1;
+}
+.kanban-card-users {
+  margin: 0;
+}
+.kanban-card-info {
+  align-items: center;
+}
+.kanban-card-users-image {
+  border: 1px solid var(--border-color);
+}
