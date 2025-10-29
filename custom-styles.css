@@ -9,6 +9,8 @@ html,
     lch(2.467 0 272 / 0.4),
     lch(2.467 0 272 / 0.1) !important;
   ) !important;
+  --cu-task-view-content-width-fullscreen: min(100% - 48px, 970px);
+  --cu-task-view-content-width-wide-fullscreen: calc(100% - 48px);
 }
 
 /* Kanban Boad */
