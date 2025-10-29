@@ -1,4 +1,6 @@
-* {
+*,
+html,
+:root {
   --platform-background: #101012 !important;
   --border-color: #202229 !important;
   --background-secondary: linear-gradient(
