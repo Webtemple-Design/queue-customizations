@@ -249,3 +249,36 @@ div[id^="task-comment"] {
   bottom: 0;
   right: 0;
 }
+
+/* Task icons before labels */
+.kanban-card-title {
+  display: flex;
+  align-items: flex-start;
+}
+.kanban-card-title:before {
+  margin-top: 1px;
+  font-family: "Font Awesome 6 Pro";
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  margin-right: 5px;
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+[data-rbd-droppable-id="In Queue"] .kanban-card-title:before {
+  content: "\f111";
+}
+[data-rbd-droppable-id="In progress"] .kanban-card-title:before {
+  content: "\f042";
+  transform: rotate(180deg);
+}
+[data-rbd-droppable-id="Needs review"] .kanban-card-title:before {
+  content: "\e5d4";
+  transform: rotate(-90deg);
+}
+[data-rbd-droppable-id="Finished"] .kanban-card-title:before {
+  content: "\f058";
+}
